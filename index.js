@@ -50,7 +50,7 @@ initPassport(passport);
 
 var api = {};
 
-//comentar iu remover depois que aplicaçao estiver funcionando
+//comentar ou remover depois que aplicaçao estiver funcionando
 /* Hello API */
 app.get("/", function(req, resp) {
 	resp.send("<h1>Hello Word!</h1>");
