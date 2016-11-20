@@ -1,0 +1,54 @@
+{
+  "name": "web-service-trabalho-pratico",
+  "version": "0.0.2",
+  "description": "web service para o trabalho pratico de tec web, dad e teste e manuntenção de software.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brallanderson/mean-stack-trabalho-pratico.git"
+  },
+  "keywords": [
+    "trabalho",
+    "pratico",
+    "dad",
+    "desenvolvimento",
+    "aplicações",
+    "distribuidas",
+    "tecnologias",
+    "web",
+    "teste",
+    "manuntenção",
+    "software",
+    "web",
+    "service",
+    "pratice"
+  ],
+  "author": "Brayan Allanderson (email: brayanallanderson@gmail.com - github: https://github.com/brallanderson)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brallanderson/mean-stack-trabalho-pratico/issues"
+  },
+  "homepage": "https://github.com/brallanderson/mean-stack-trabalho-pratico#readme",
+  "devDependencies": {
+    "express-generator": "^4.14.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.3.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "jade": "^1.11.0",
+    "mongoose": "^4.6.8",
+    "morgan": "^1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "static-favicon": "^2.0.0-alpha"
+  }
+}
