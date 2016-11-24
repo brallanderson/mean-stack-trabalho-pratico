@@ -1,0 +1,66 @@
+extends layout
+
+block content
+  div(class="row-fluid")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        h2 Resultado busca por eleitorado
+  div(class="row-fluid espacamento_top")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        table(class="dataTable table table-striped")
+          tr
+            td
+              strong DATA GERACAO
+            td #{valor1.DATA_GERACAO}
+            td #{valor2.DATA_GERACAO}
+          tr  
+            td
+              strong ANO ELEICAO
+            td #{valor1.ANO_ELEICAO}
+            td #{valor2.ANO_ELEICAO}
+          tr  
+            td
+              strong NUM TURNO
+            td #{valor1.NUM_TURNO}
+            td #{valor2.NUM_TURNO}
+          tr  
+            td
+              strong DESCRICAO ELEICAO
+            td #{valor1.DESCRICAO_ELEICAO}
+            td #{valor2.DESCRICAO_ELEICAO}
+          tr  
+            td
+              strong ESTADO
+            td #{valor1.SIGLA_UF}
+            td #{valor2.SIGLA_UF}
+          tr  
+            td
+              strong CIDADE
+            td #{valor1.DESCRICAO_UE}
+            td #{valor2.DESCRICAO_UE}
+          tr  
+            td
+              strong CARGO
+            td #{valor1.DESCRICAO_CARGO}
+            td #{valor2.DESCRICAO_CARGO}
+          tr  
+            td
+              strong NOME_CANDIDATO
+            td #{valor1.NOME_CANDIDATO}
+            td #{valor2.NOME_CANDIDATO}
+          tr  
+            td
+              strong NOME DO MUNICIPIO DE NASCIMENTO     
+            td #{valor2.NOME_MUNICIPIO_NASCIMENTO }    
+            td #{valor2.NOME_MUNICIPIO_NASCIMENTO }       
+          tr  
+            td
+              strong DESPESA MAX DA CAMPANHA
+            td #{valor1.DESPESA_MAX_CAMPANHA}
+            td #{valor2.DESPESA_MAX_CAMPANHA}
+          tr
+            td
+              strong EMAIL
+            td #{valor1.NM_EMAIL}  
+            td #{valor2.NM_EMAIL}

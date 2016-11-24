@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  div(class="row-fluid")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        h2 Comparar Candidatos
+      
+  div(class="row-fluid espacamento_top")
+    div(class="container-fluid")
+      form(method="POST")
+        div(class="col-md-12")
+          div(class="col-md-3")
+            p
+              label Cargo: 
+          div(class="col-md-3")
+            p
+              input(type='text' name="cargo")
+        div(class="col-md-12")
+          div(class="col-md-3")
+            p
+              label Nome do Candidato 1
+          div(class="col-md-3")
+            p
+              input(type='text' name="nome_candidato1" REQUIRE)
+          div(class="col-md-3")
+            p
+              label Nome do Candidato 2
+          div(class="col-md-3")
+            p
+              input(type='text' name="nome_candidato2" REQUIRE)
+          div(class="col-md-12" align='right')
+            p
+              button(type="submit" href="/resultadocomparacandidato") Buscar
+       

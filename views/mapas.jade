@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  div(class="row-fluid")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        h2 Mapa do site
+  div(class="row-fluid espacamento_top")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        p
+          strong
+            a(href='/home') • Index
+      div(class="col-md-12")
+        p
+          strong
+            a(href='/eleitorado') • Eleitorado
+        div(class="col-md-12")
+          p
+            strong
+              a(href='eleitorado/listacompletaeleitorado') • Lista completa do eleitorado
+          p
+            strong
+              a(href='eleitorado/buscaeleitorado') • Buscar por eleitorado
+      div(class="col-md-12")
+        p
+          strong
+            a(href='/candidato') • Candidatos
+        div(class="col-md-12")
+          p
+            strong
+              a(href='candidato/verificacandidato') • Verificar Candidatos
+          p
+            strong
+              a(href='candidato/comparacandidato') • Comparar Candidatos
+      div(class="col-md-12")
+        p
+          strong
+            a(href='/sobre') • Sobre o sistema

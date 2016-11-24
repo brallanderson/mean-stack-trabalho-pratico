@@ -1,3 +1,4 @@
+//model de dados dos candidatos
 var mongoose = require('mongoose');
 
 var schemaCandidatos = new mongoose.Schema({

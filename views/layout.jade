@@ -1,0 +1,100 @@
+//- tela de layout compoe todas as telas com o logo do sistema e o menu
+doctype html
+html
+  head
+    title MENSALHINHO
+    link(rel='stylesheet', href='/css/style.css')
+    script(type='text/javascript', src='/jquery/jquery-3.1.1.min.js')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+    script(type='text/javascript', src='/bootstrap/js/bootstrap.js')
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+    link(rel='stylesheet', href='/dataTable/css/jquery.dataTables.min.css')
+    link(rel='stylesheet', href='/dataTable/css/buttons.dataTables.min.css')
+    link(rel='stylesheet', href='/dataTable/css/select.dataTables.min.css')
+    link(rel='stylesheet', href='/dataTable/css/responsive.dataTables.min.css')
+    script(language='JavaScript').
+      var pageheigth  = $(window).height();   
+      var pagewidth = $(window).width();
+  body(id="content")
+    div(class="container-fluid")
+      div(class="row-fluid")
+        div(class="col-md-12")
+          div(class="col-md-12 cor" align='center')
+            div(class="col-md-9")
+            div(class="col-md-3" style='background: #9fb6cd !important;')
+              div(class="col-md-2")
+                label Letra
+              div(class="col-md-2")
+                button(type="submit", value="aumentar", id="btnAumentar")
+                  strong A+
+              div(class="col-md-2")
+                button(type="submit", value="diminuir", id="btnDiminuir")
+                  strong A-
+              div(class="col-md-6")
+                button
+                  strong Contraste
+             div(class="col-md-12" align='center')
+              h2
+                strong MENSALINHO
+      div(class="row-fluid")
+        div(class="col-md-12" height='50px')
+          nav(class="navbar navbar-default")
+            div(id="bs-example-navbar-collapse-1" class="collapse navbar-collapse")
+              ul(class="nav navbar-nav")
+                li
+                  a(href='/home')
+                    strong HOME 
+                li
+                  a(href='/eleitorado')
+                    strong ELEITORADO 
+                li
+                  a(href='/candidato')
+                    strong CANDIDATOS 
+                li
+                  a(href='/sobre')
+                    strong SOBRE O SISTEMA 
+              ul(class="nav navbar-nav navbar-right")
+                li
+                  a(href='/mapas')
+                    strong MAPA DO SITE
+                li
+                  a(href='/sair')
+                    strong SAIR
+      div(class="row-fluid" height='auto')
+        div(class="container-fluid")
+            block content
+    script(type='text/javascript', src='/jquery/jquery-3.1.1.min.js')
+    script(type='text/javascript', src='/bootstrap/js/bootstrap.js')
+    script(type='text/javascript', src='/dataTable/js/jquery.dataTables.min.js')
+    script(type='text/javascript', src='/dataTable/js/dataTables.buttons.min.js')
+    script(type='text/javascript', src='/dataTable/js/dataTables.select.min.js')
+    script(type='text/javascript', src='/dataTable/js/dataTables.responsive.min.js')
+    script(type='text/javascript').
+      window.onload = function() {
+        var $btnAumentar = $("#btnAumentar");
+        var $btnDiminuir = $("#btnDiminuir");
+        var $elemento = $("body p").find("*"); //encontra todos os elementos dentro do #content
+        var fonts = [];
+
+        function obterTamanhoFonte() {
+          for (var i = 0; i < $elemento.length; i++) {
+            fonts.push(parseFloat($elemento.eq(i).css('font-size')));
+          }
+        }
+        obterTamanhoFonte();
+        $btnAumentar.on('click', function() {
+          for (var i = 0; i < $elemento.length; i++) {
+            ++fonts[i];
+            $elemento.eq(i).css('font-size', fonts[i]);
+          }
+        });
+
+        $btnDiminuir.on('click', function() {
+          for (var i = 0; i < $elemento.length; i++) {
+            --fonts[i];
+            $elemento.eq(i).css('font-size', fonts[i]);
+          }
+        });
+      }
+      

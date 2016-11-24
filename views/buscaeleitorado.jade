@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  div(class="row-fluid")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        h2 Busca por eleitorado
+  div(class="row-fluid")
+    div(class="container-fluid")
+      form(method="POST", action="buscaeleitorado")
+        div(class="col-md-3")
+          p
+            strong Selecione Município: 
+        div(class="col-md-3")
+          p
+            input(type='text', name='municipio', required)
+        div(class="col-md-3")
+          p
+            strong Selecione Zona eleitoral: 
+        div(class="col-md-3")
+          p
+            input(type='text', name='zona', required)
+        div(class="col-md-3")
+          p
+            strong Faixa-Etária:
+        div(class="col-md-3")
+          p
+            input(type='text', name='faixaetaria', required)
+        div(class="col-md-3")
+          p
+                strong Escolaridade: 
+        div(class="col-md-3")
+          p
+            input(type='text', name='escolaridade', required)
+        div(class="col-md-3")
+          p
+            strong Sexo: 
+        div(class="col-md-3")
+          p
+            input(type='text', name='sexo', required)
+        div(class="col-md-12" align='right')
+          p
+            button(type="submit" href="/resultadobuscaeleitorado")
+              strong Buscar
+  
+

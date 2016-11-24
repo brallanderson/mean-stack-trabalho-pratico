@@ -1,0 +1,191 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet', href='/dataTable/css/jquery.dataTables.min.css')
+  link(rel='stylesheet', href='/dataTable/css/buttons.dataTables.min.css')
+  link(rel='stylesheet', href='/dataTable/css/select.dataTables.min.css')
+  link(rel='stylesheet', href='/dataTable/css/responsive.dataTables.min.css')
+  div(class="row-fluid")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        h2 Lista completa do eleitorado
+  div(class="row-fluid")
+    div(class="container-fluid")
+      table(id="example" class="dataTable table table-striped" cellpadding='0', cellspacing='0', border='0')
+        thead
+          tr
+            th DATA GERACAO
+            th HORA GERACAO
+            th ANO ELEICAO
+            th NUM TURNO
+            th DESCRICAO ELEICAO
+            th SIGLA UF
+            th SIGLA UE
+            th DESCRICAO UE
+            th DESCRICAO CARGO
+            th NOME CANDIDATO
+            th SEQUENCIAL CANDIDATO
+            th NUMERO CANDIDATO
+            th CPF CANDIDATO
+            th NOME URNA CANDIDATO
+            th COD SITUACAO CANDIDATURA
+            th DES SITUACAO CANDIDATURA
+            th NUMERO PARTIDO
+            th SIGLA PARTIDO
+            th NOME PARTIDO
+            th CODIGO LEGENDA
+            th SIGLA LEGENDA
+            th COMPOSICAO LEGENDA
+            th NOME LEGENDA
+            th CODIGO OCUPACAO
+            th DESCRICAO OCUPACAO
+            th DATA NASCIMENTO
+            th NUM TITULO ELEITORAL CANDIDATO
+            th IDADE DATA ELEICAO            
+            th CODIGO SEXO
+            th DESCRICAO SEXO
+            th COD GRAU INSTRUCAO
+            th DESCRICAO GRAU INSTRUCAO
+            th CODIGO ESTADO CIVIL            
+            th DESCRICAO ESTADO CIVIL
+            th CODIGO COR RACA
+            th DESCICAO COR RACA
+            th CODIGO NACIONALIDADE
+            th DESCRICAO NACIONALIDADE            
+            th SIGLA UF NASCIMENTO
+            th CODIGO MUNICIPIO NASCIMENTO
+            th NOME MUNICIPIO NASCIMENTO        
+            th DESPESA MAX CAMPANHA
+            th COD SIT TOT TURNO
+            th DESC SIT TOT TURNO        
+            th NM EMAIL
+        tbody
+          each valor, i in lista
+            tr
+              td #{valor.DATA_GERACAO}
+              td #{valor.HORA_GERACAO}
+              td #{valor.ANO_ELEICAO}
+              td #{valor.NUM_TURNO}
+              td #{valor.DESCRICAO_ELEICAO}
+              td #{valor.SIGLA_UF}
+              td #{valor.SIGLA_UE}
+              td #{valor.DESCRICAO_UE}
+              td #{valor.DESCRICAO_CARGO}
+              td #{valor.NOME_CANDIDATO}
+              td #{valor.SEQUENCIAL_CANDIDATO}
+              td #{valor.NUMERO_CANDIDATO}
+              td #{valor.CPF_CANDIDATO}
+              td #{valor.NOME_URNA_CANDIDATO}
+              td #{valor.COD_SITUACAO_CANDIDATURA}
+              td #{valor.DES_SITUACAO_CANDIDATURA}
+              td #{valor.NUMERO_PARTIDO}
+              td #{valor.SIGLA_PARTIDO}
+              td #{valor.NOME_PARTIDO}
+              td #{valor.CODIGO_LEGENDA}
+              td #{valor.SIGLA_LEGENDA}
+              td #{valor.COMPOSICAO_LEGENDA}
+              td #{valor.NOME_LEGENDA}
+              td #{valor.CODIGO_OCUPACAO}
+              td #{valor.DESCRICAO_OCUPACAO}
+              td #{valor.DATA_NASCIMENTO}
+              td #{valor.NUM_TITULO_ELEITORAL_CANDIDATO}
+              td #{valor.IDADE_DATA_ELEICAO  }          
+              td #{valor.CODIGO_SEXO}
+              td #{valor.DESCRICAO_SEXO}
+              td #{valor.COD_GRAU_INSTRUCAO}
+              td #{valor.DESCRICAO_GRAU_INSTRUCAO}
+              td #{valor.CODIGO_ESTADO_CIVIL     }       
+              td #{valor.DESCRICAO_ESTADO_CIVIL}
+              td #{valor.CODIGO_COR_RACA}
+              td #{valor.DESCICAO_COR_RACA}
+              td #{valor.CODIGO_NACIONALIDADE}
+              td #{valor.DESCRICAO_NACIONALIDADE    }        
+              td #{valor.SIGLA_UF_NASCIMENTO}
+              td #{valor.CODIGO_MUNICIPIO_NASCIMENTO}
+              td #{valor.NOME_MUNICIPIO_NASCIMENTO }       
+              td #{valor.DESPESA_MAX_CAMPANHA}
+              td #{valor.COD_SIT_TOT_TURNO}
+              td #{valor.DESC_SIT_TOT_TURNO  }      
+              td #{valor.NM_EMAIL}
+        tfoot
+          tr
+            th DATA GERACAO
+            th HORA GERACAO
+            th ANO ELEICAO
+            th NUM TURNO
+            th DESCRICAO ELEICAO
+            th SIGLA UF
+            th SIGLA UE
+            th DESCRICAO UE
+            th DESCRICAO CARGO
+            th NOME CANDIDATO
+            th SEQUENCIAL CANDIDATO
+            th NUMERO CANDIDATO
+            th CPF CANDIDATO
+            th NOME URNA CANDIDATO
+            th COD SITUACAO CANDIDATURA
+            th DES SITUACAO CANDIDATURA
+            th NUMERO PARTIDO
+            th SIGLA PARTIDO
+            th NOME PARTIDO
+            th CODIGO LEGENDA
+            th SIGLA LEGENDA
+            th COMPOSICAO LEGENDA
+            th NOME LEGENDA
+            th CODIGO OCUPACAO
+            th DESCRICAO OCUPACAO
+            th DATA NASCIMENTO
+            th NUM TITULO ELEITORAL CANDIDATO
+            th IDADE DATA ELEICAO            
+            th CODIGO SEXO
+            th DESCRICAO SEXO
+            th COD GRAU INSTRUCAO
+            th DESCRICAO GRAU INSTRUCAO
+            th CODIGO ESTADO CIVIL            
+            th DESCRICAO ESTADO CIVIL
+            th CODIGO COR RACA
+            th DESCICAO COR RACA
+            th CODIGO NACIONALIDADE
+            th DESCRICAO NACIONALIDADE            
+            th SIGLA UF NASCIMENTO
+            th CODIGO MUNICIPIO NASCIMENTO
+            th NOME MUNICIPIO NASCIMENTO        
+            th DESPESA MAX CAMPANHA
+            th COD SIT TOT TURNO
+            th DESC SIT TOT TURNO        
+            th NM EMAIL
+
+  script(type='text/javascript', src='/jquery/jquery-3.1.1.min.js')
+  script(type='text/javascript', src='/bootstrap/js/bootstrap.js')
+  script(type='text/javascript', src='/dataTable/js/jquery.dataTables.min.js')
+  script(type='text/javascript', src='/dataTable/js/dataTables.buttons.min.js')
+  script(type='text/javascript', src='/dataTable/js/dataTables.select.min.js')
+  script(type='text/javascript', src='/dataTable/js/dataTables.responsive.min.js')
+  script(type='text/javascript').
+    $(document).ready(function() {
+      var table = $('#example').dataTable({
+        cache : true,
+        destroy : true,
+        paging : true,
+        lengthChange : true,
+        bSearchable : true,
+        ordering : true,
+        info : true,
+        autoWidth : false,
+        scrollX : true,
+        stateSave : true
+      });
+      
+      table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+      });
+    });

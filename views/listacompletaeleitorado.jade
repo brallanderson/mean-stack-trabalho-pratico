@@ -1,0 +1,86 @@
+extends layout
+
+block content
+  //- exibe todos os dados do eleitorado
+  link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+  link(rel='stylesheet', href='/dataTable/css/jquery.dataTables.min.css')
+  link(rel='stylesheet', href='/dataTable/css/buttons.dataTables.min.css')
+  link(rel='stylesheet', href='/dataTable/css/select.dataTables.min.css')
+  link(rel='stylesheet', href='/dataTable/css/responsive.dataTables.min.css')
+  div(class="row-fluid")
+    div(class="container-fluid")
+      div(class="col-md-12")
+        h2 Lista completa do eleitorado
+  div(class="row-fluid")
+    div(class="container-fluid")
+      table(id="example" class="dataTable table table-striped" cellpadding='0', cellspacing='0', border='0')
+        thead
+          tr
+            th ID
+            th PERIODO
+            th ESTADO
+            th MUNICIPIO
+            th COD. MUNICIPIO TSE
+            th NR ZONA
+            th SEXO
+            th FAIXA ETARIA
+            th GRAU DE ESCOLARIDADE
+            th QTD ELEITORES NO PERFIL
+        tbody
+          each valor, i in lista
+            tr
+              td #{valor._id}
+              td #{valor.PERIODO}
+              td #{valor.UF}
+              td #{valor.MUNICIPIO}
+              td #{valor.COD_MUNICIPIO_TSE}
+              td #{valor.NR_ZONA}
+              td #{valor.SEXO}
+              td #{valor.FAIXA_ETARIA}
+              td #{valor.GRAU_DE_ESCOLARIDADE}
+              td #{valor.QTD_ELEITORES_NO_PERFIL}
+        tfoot
+          tr
+            th ID
+            th PERIODO
+            th ESTADO
+            th MUNICIPIO
+            th COD. MUNICIPIO TSE
+            th NR ZONA
+            th SEXO
+            th FAIXA ETARIA
+            th GRAU DE ESCOLARIDADE
+            th QTD ELEITORES NO PERFIL
+
+  script(type='text/javascript', src='/jquery/jquery-3.1.1.min.js')
+  script(type='text/javascript', src='/bootstrap/js/bootstrap.js')
+  script(type='text/javascript', src='/dataTable/js/jquery.dataTables.min.js')
+  script(type='text/javascript', src='/dataTable/js/dataTables.buttons.min.js')
+  script(type='text/javascript', src='/dataTable/js/dataTables.select.min.js')
+  script(type='text/javascript', src='/dataTable/js/dataTables.responsive.min.js')
+  script(type='text/javascript').
+    $(document).ready(function() {
+      var table = $('#example').dataTable({
+        cache : true,
+        destroy : true,
+        paging : true,
+        lengthChange : true,
+        bSearchable : true,
+        ordering : true,
+        info : true,
+        autoWidth : false,
+        scrollX : true,
+        stateSave : true
+      });
+      table.columns().every( function () {
+        var that = this;
+ 
+        $( 'input', this.footer() ).on( 'keyup change', function () {
+            if ( that.search() !== this.value ) {
+                that
+                    .search( this.value )
+                    .draw();
+            }
+        } );
+      });
+    });

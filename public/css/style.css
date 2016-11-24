@@ -1,0 +1,40 @@
+.lista a:link
+{ 
+ 	text-decoration:none; 
+} 
+ul {
+  list-style-type: none;
+}
+button 
+{ 
+ text-decoration:none; 
+} 
+.cor {
+	background: #9fb6cd !important;
+	height: 100px;
+	
+}
+.margintopzero{
+	margin-top: -10px !important;
+}
+.marginbottomzero{
+	margin-bottom: -100px !important;
+}
+.telas{
+	height: 100% ;
+	width: 100% ;
+}
+.login{
+	margin-top: 20px;
+	background: #eee !important;
+	padding: 20px;
+	border-radius: 6px;
+}
+
+.espacamento_top{
+	margin-top: 40px;
+
+}
+.pesquisatable{
+	width:100% !important;
+}

@@ -1,3 +1,4 @@
+//model de dados dos usuarios
 var mongoose = require('mongoose');
 
 var schemaUsuario = new mongoose.Schema({
@@ -10,4 +11,4 @@ municipio: {type: String, required: true}
 
 });
 
-module.exports = mongoose.model('Ususario', schemaUsuario);
+module.exports = mongoose.model('Usuario', schemaUsuario);

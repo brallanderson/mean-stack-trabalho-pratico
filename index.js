@@ -52,13 +52,16 @@ var api = {};
 
 //comentar ou remover depois que aplicaçao estiver funcionando
 /* Hello API */
-app.get("/", function(req, resp) {
-	resp.send("<h1>Hello Word!</h1>");
-});
+// app.get("/", function(req, resp) {
+// 	resp.send("<h1>Hello Word!</h1>");
+// });
 
 //descomentar depois que criar a tela de login
-//api.pass = require('./routes/routes-login.js')(passport);
-//app.use('/', api.pass);
+api.pass = require('./routes/routes-login.js')(passport);
+app.use('/', api.pass);
+
+api.gerais = require('./routes/routes-gerais.js');
+app.use('/', api.gerais);
 
 api.eleitor = require('./routes/routes-eleitorado.js');
 app.use('/eleitorado', api.eleitor);
@@ -66,11 +69,16 @@ app.use('/eleitorado', api.eleitor);
 api.login = require('./routes/routes-login.js');
 app.use('/login', api.login);
 
-api.prefeito = require('./routes/routes-prefeito.js');
-app.use('/prefeitos', api.prefeito);
+api.candidato = require('./routes/routes-candidatos.js');
+app.use('/candidato', api.candidato);
 
-api.vereador = require('./routes/routes-vereador.js');
-app.use('/vereadores', api.vereador);
+api.gerais = require('./routes/routes-gerais.js');
+app.use('/mapas', api.gerais);
+// api.prefeito = require('./routes/routes-prefeito.js');
+// app.use('/prefeitos', api.prefeito);
+
+// api.vereador = require('./routes/routes-vereador.js');
+// app.use('/vereadores', api.vereador);
 
 // catch 404 e encaminhar para manipulador de erro
 app.use(function(req, res, next) {

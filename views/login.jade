@@ -1,0 +1,41 @@
+html
+  head
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
+  body(style='background: #9fb6cd !important;')
+    div(class="container-fluid")
+      div(class="row-fluid")
+        div(class="container-fluid")
+          div(class="col-md-12")
+            div(class="col-md-12" coralign='center')
+              div(class="col-md-9")
+              div(class="col-md-3" style='background: #9fb6cd !important;')
+                div(class="col-md-2")
+                  label Letra
+                div(class="col-md-2")
+                  button
+                    strong A+
+                div(class="col-md-2")
+                  button
+                    strong A-
+                div(class="col-md-6")
+                  button
+                    strong Contraste
+              div(class="col-md-12" align='center')
+                h2
+                  strong MENSALINHO
+      div(class="row-fluid")
+        div(class="container-fluid")
+          div(class="col-md-4")
+          div(class="col-md-4 login" align='center')
+            form(class='form-signin', action='/login', method='POST')
+              input(type='text', name='username' class='form-control', placeholder='Usuario',required, autofocus)
+              input(type='password', name='password' class='form-control', placeholder='Senha', required)
+              br
+              button(class='btn btn-lg btn-primary btn-block', type='submit') Acessar
+            div(class="col-md-6 espacamento_top")
+              a(href="/esquecersenha") Esqueci minha senha
+            div(class="col-md-6 espacamento_top")
+              a(href="/cadastrausuario") Cadastrar novo usuário   
+    script(type='text/javascript', src='/jquery/jquery-3.1.1.min.js')
+    script(type='text/javascript', src='w/bootstrap/js/bootstrap.js')
