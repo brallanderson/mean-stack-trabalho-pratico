@@ -1,0 +1,9 @@
+var mongoose = require('mongoose');
+
+var schemaUF = new mongoose.Schema({
+
+UF: {type: String, required: true },
+
+});
+
+module.exports = mongoose.model('UF', schemaEleitorado);
