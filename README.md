@@ -42,6 +42,10 @@ Ctrl + C para sair do shell do mongo, acesse o diretorio raiz do projeto e de o 
 	
 	nodemon server.js
 
-Abra o browser acesse localhost:8080, lembre se de não fechar o prompt de comnado onde se iniciou o
+Abra o browser acesse:
+
+	localhost:8080
+	
+Lembre se de não fechar o prompt de comnado onde se iniciou o
 mongo e o server.
 
