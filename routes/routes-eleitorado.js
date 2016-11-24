@@ -8,7 +8,7 @@ var access = require('../routes/access-router.js');
 //});
 
 router.get('/find', function(req, res) {
-  Client.find({NR_ZONA: req.query.nrZona, MUNICIPIO: req.query.cidade.toUpperCase()}, function(err, data) {
+  Eleitor.find({NR_ZONA: req.query.nrZona, MUNICIPIO: req.query.cidade.toUpperCase()}, function(err, data) {
     if (err) {
       res.sendStatus(404);
     } else {
