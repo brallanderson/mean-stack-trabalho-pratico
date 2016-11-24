@@ -10,7 +10,7 @@ NR_ZONA: {type: Number, required: true },
 SEXO: {type: String, required: true },
 FAIXA_ETARIA: {type: Number, required: true },
 GRAU_DE_ESCOLARIDADE: {type: String, required: true },
-QTD_ELEITORES_NO_PERFIL: {type: String, required: true }
+QTD_ELEITORES_NO_PERFIL: {type: Number, required: true }
 
 });
 
